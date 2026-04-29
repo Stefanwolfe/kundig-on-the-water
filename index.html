@@ -839,6 +839,49 @@ a { color: inherit; text-decoration: none; }
   padding: 0 14px;
 }
 
+/* ------ film (cinematic tour) ------ */
+.film {
+  background: var(--limestone);
+  padding: 90px 48px 100px;
+}
+.film-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.film-head {
+  text-align: center;
+  margin: 0 auto 44px;
+  max-width: 760px;
+}
+.film-head .role { display: block; margin-bottom: 22px; }
+.film-frame {
+  position: relative;
+  aspect-ratio: 16/9;
+  background: var(--ink);
+  overflow: hidden;
+}
+.film-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.film-caption {
+  margin-top: 22px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink-muted);
+  text-align: center;
+}
+@media (max-width: 720px) {
+  .film { padding: 64px 28px 72px; }
+  .film-head { margin-bottom: 32px; }
+}
+
 /* ------ location ------ */
 .location {
   padding: 140px 48px;
@@ -1154,6 +1197,7 @@ a { color: inherit; text-decoration: none; }
     <li><a href="#materials">Materials</a></li>
     <li><a href="#architects">Architect</a></li>
     <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#film">Tour</a></li>
     <li><a href="#location">Location</a></li>
   </ul>
   <a href="#inquiries" class="nav-inquire">Private Inquiry</a>
@@ -1168,6 +1212,7 @@ a { color: inherit; text-decoration: none; }
   <a href="#materials">Materials</a>
   <a href="#architects">Architect</a>
   <a href="#gallery">Gallery</a>
+  <a href="#film">Tour</a>
   <a href="#location">Location</a>
   <a href="#inquiries">Inquire</a>
 </div>
@@ -1175,7 +1220,7 @@ a { color: inherit; text-decoration: none; }
 <!-- hero -->
 <section class="hero matted" id="top">
   <div class="hero-media">
-    <img src="images/10-aerial-daylight-hero.jpg" alt="Aerial view of 415 Shoreland Drive on Lake Washington">
+    <img src="images/approach.jpg" alt="415 Shoreland Drive: Roman-brick façade and copper roof beneath the cedars">
   </div>
   <div class="hero-gradient"></div>
   <div class="hero-foot">
@@ -1228,7 +1273,7 @@ a { color: inherit; text-decoration: none; }
       <span class="label">The Approach</span>
     </div>
     <div class="plate-image matted matted--ink">
-      <img src="images/approach.jpg" alt="The driveway approach to 415 Shoreland Drive">
+      <img src="images/10-aerial-daylight-hero.jpg" alt="The residence at last light, seen from Lake Washington">
     </div>
     <div class="plate-caption">A Roman-brick façade beneath a copper roof, set among native cedars.</div>
   </div>
@@ -1379,6 +1424,25 @@ a { color: inherit; text-decoration: none; }
     <button class="gallery-btn" id="gPrev" aria-label="Previous">&#8592;</button>
     <span class="gallery-count"><span id="gIdx">1</span> / 40</span>
     <button class="gallery-btn" id="gNext" aria-label="Next">&#8594;</button>
+  </div>
+</section>
+
+<!-- film (cinematic tour) -->
+<section class="film" id="film">
+  <div class="film-inner">
+    <div class="film-head">
+      <span class="role">A Cinematic Tour</span>
+      <h2 class="italic-title"><em>Through the residence.</em></h2>
+    </div>
+    <div class="film-frame matted matted--ink">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/ZIF30Mb97og?rel=0&modestbranding=1"
+        title="A walking tour of 415 Shoreland Drive"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
   </div>
 </section>
 
